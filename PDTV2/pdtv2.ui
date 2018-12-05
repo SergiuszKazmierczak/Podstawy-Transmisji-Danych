@@ -1,25 +1,35 @@
-<UI version="4.0" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
  <class>PDTV2Class</class>
- <widget class="QWidget" name="PDTV2Class" >
-  <property name="objectName" >
-   <string notr="true">PDTV2Class</string>
-  </property>
-  <property name="geometry" >
+ <widget class="QWidget" name="PDTV2Class">
+  <property name="geometry">
    <rect>
-	<x>0</x>
-	<y>0</y>
-	<width>600</width>
-	<height>400</height>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
    </rect>
   </property>
-  <property name="windowTitle" >
+  <property name="windowTitle">
    <string>PDTV2</string>
   </property>
+  <widget class="QPushButton" name="lab1Button">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>20</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>LAB1</string>
+   </property>
+  </widget>
  </widget>
- <layoutDefault spacing="6" margin="11" />
- <pixmapfunction></pixmapfunction>
+ <layoutdefault spacing="6" margin="11"/>
  <resources>
-   <include location="pdtv2.qrc"/>
+  <include location="pdtv2.qrc"/>
  </resources>
  <connections/>
-</UI>
+</ui>

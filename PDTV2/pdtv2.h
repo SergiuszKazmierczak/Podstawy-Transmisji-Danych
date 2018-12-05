@@ -12,4 +12,6 @@ public:
 
 private:
 	Ui::PDTV2Class ui;
+private slots:
+	void on_lab1Button_clicked();
 };
