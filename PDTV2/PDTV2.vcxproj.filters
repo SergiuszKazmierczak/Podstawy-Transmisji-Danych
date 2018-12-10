@@ -48,6 +48,9 @@
     <ClCompile Include="Functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ptd_lab2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -67,12 +70,18 @@
     <QtMoc Include="qcustomplot.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="ptd_lab2.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="pdtv2.ui">
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="ptd_lab1.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ptd_lab2.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>

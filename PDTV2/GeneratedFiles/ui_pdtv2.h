@@ -20,15 +20,19 @@ class Ui_PDTV2Class
 {
 public:
     QPushButton *lab1Button;
+    QPushButton *lab2Button;
 
     void setupUi(QWidget *PDTV2Class)
     {
         if (PDTV2Class->objectName().isEmpty())
             PDTV2Class->setObjectName(QStringLiteral("PDTV2Class"));
-        PDTV2Class->resize(600, 400);
+        PDTV2Class->resize(957, 73);
         lab1Button = new QPushButton(PDTV2Class);
         lab1Button->setObjectName(QStringLiteral("lab1Button"));
         lab1Button->setGeometry(QRect(40, 20, 93, 28));
+        lab2Button = new QPushButton(PDTV2Class);
+        lab2Button->setObjectName(QStringLiteral("lab2Button"));
+        lab2Button->setGeometry(QRect(140, 20, 93, 28));
 
         retranslateUi(PDTV2Class);
 
@@ -39,6 +43,7 @@ public:
     {
         PDTV2Class->setWindowTitle(QApplication::translate("PDTV2Class", "PDTV2", nullptr));
         lab1Button->setText(QApplication::translate("PDTV2Class", "LAB1", nullptr));
+        lab2Button->setText(QApplication::translate("PDTV2Class", "LAB2", nullptr));
     } // retranslateUi
 
 };
