@@ -15,4 +15,5 @@ private:
 private slots:
 	void on_lab1Button_clicked();
 	void on_lab2Button_clicked();
+	void on_lab3Button_clicked();
 };

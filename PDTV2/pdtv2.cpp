@@ -2,6 +2,7 @@
 #include "pdtv2.h"
 #include "ptd_lab1.h"
 #include "PTD_lab2.h"
+#include "ptd_lab3.h"
 
 PDTV2::PDTV2(QWidget *parent)
 	: QWidget(parent)
@@ -20,3 +21,8 @@ void PDTV2::on_lab2Button_clicked()
 	lab2.exec();
 }
 
+void PDTV2::on_lab3Button_clicked()
+{
+	PTD_lab3 lab3(this);
+	lab3.exec();
+}
