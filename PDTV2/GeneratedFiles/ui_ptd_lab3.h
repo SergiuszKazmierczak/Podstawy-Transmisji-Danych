@@ -12,7 +12,9 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QWidget>
 #include <qcustomplot.h>
 
 QT_BEGIN_NAMESPACE
@@ -20,8 +22,10 @@ QT_BEGIN_NAMESPACE
 class Ui_PTD_lab3
 {
 public:
-    QPushButton *wykr1Button;
     QCustomPlot *customPlot;
+    QWidget *widget;
+    QHBoxLayout *horizontalLayout;
+    QPushButton *wykr1Button;
     QPushButton *amp1Button;
     QPushButton *amp2Button;
     QPushButton *amp3Button;
@@ -34,30 +38,52 @@ public:
         if (PTD_lab3->objectName().isEmpty())
             PTD_lab3->setObjectName(QStringLiteral("PTD_lab3"));
         PTD_lab3->resize(1172, 729);
-        wykr1Button = new QPushButton(PTD_lab3);
-        wykr1Button->setObjectName(QStringLiteral("wykr1Button"));
-        wykr1Button->setGeometry(QRect(20, 10, 93, 28));
         customPlot = new QCustomPlot(PTD_lab3);
         customPlot->setObjectName(QStringLiteral("customPlot"));
-        customPlot->setGeometry(QRect(60, 70, 961, 451));
-        amp1Button = new QPushButton(PTD_lab3);
+        customPlot->setGeometry(QRect(20, 50, 1101, 651));
+        widget = new QWidget(PTD_lab3);
+        widget->setObjectName(QStringLiteral("widget"));
+        widget->setGeometry(QRect(20, 10, 1101, 30));
+        horizontalLayout = new QHBoxLayout(widget);
+        horizontalLayout->setSpacing(6);
+        horizontalLayout->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        horizontalLayout->setContentsMargins(0, 0, 0, 0);
+        wykr1Button = new QPushButton(widget);
+        wykr1Button->setObjectName(QStringLiteral("wykr1Button"));
+
+        horizontalLayout->addWidget(wykr1Button);
+
+        amp1Button = new QPushButton(widget);
         amp1Button->setObjectName(QStringLiteral("amp1Button"));
-        amp1Button->setGeometry(QRect(120, 10, 93, 28));
-        amp2Button = new QPushButton(PTD_lab3);
+
+        horizontalLayout->addWidget(amp1Button);
+
+        amp2Button = new QPushButton(widget);
         amp2Button->setObjectName(QStringLiteral("amp2Button"));
-        amp2Button->setGeometry(QRect(220, 10, 93, 28));
-        amp3Button = new QPushButton(PTD_lab3);
+
+        horizontalLayout->addWidget(amp2Button);
+
+        amp3Button = new QPushButton(widget);
         amp3Button->setObjectName(QStringLiteral("amp3Button"));
-        amp3Button->setGeometry(QRect(320, 10, 93, 28));
-        fm1Button = new QPushButton(PTD_lab3);
+
+        horizontalLayout->addWidget(amp3Button);
+
+        fm1Button = new QPushButton(widget);
         fm1Button->setObjectName(QStringLiteral("fm1Button"));
-        fm1Button->setGeometry(QRect(420, 10, 93, 28));
-        fm2Button = new QPushButton(PTD_lab3);
+
+        horizontalLayout->addWidget(fm1Button);
+
+        fm2Button = new QPushButton(widget);
         fm2Button->setObjectName(QStringLiteral("fm2Button"));
-        fm2Button->setGeometry(QRect(520, 10, 93, 28));
-        fm3Button = new QPushButton(PTD_lab3);
+
+        horizontalLayout->addWidget(fm2Button);
+
+        fm3Button = new QPushButton(widget);
         fm3Button->setObjectName(QStringLiteral("fm3Button"));
-        fm3Button->setGeometry(QRect(620, 10, 93, 28));
+
+        horizontalLayout->addWidget(fm3Button);
+
 
         retranslateUi(PTD_lab3);
 

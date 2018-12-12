@@ -135,11 +135,6 @@ void PTD_lab3::on_fm3Button_clicked()
 
 
 
-double PTD_lab3::signal(double i)
-{
-	double fm = 2;
-	return 2 * sin(2. * std::_Pi * i * fm);
-}
 
 void PTD_lab3::Wykres(QVector<double> x, QVector<double> y)
 {
@@ -178,6 +173,11 @@ long double PTD_lab3::min(QVector<double> x)
 		}
 	}
 	return min;
+}
+double PTD_lab3::signal(double i)
+{
+	double fm = 2;
+	return 2 * sin(2. * std::_Pi * i * fm);
 }
 
 double PTD_lab3::ModulacjaAmp(double t, double k, double fn)
