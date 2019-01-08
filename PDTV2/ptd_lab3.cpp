@@ -45,6 +45,7 @@ void PTD_lab3::on_amp1Button_clicked()
 		x[i] = ((static_cast<double>(i)) / fs);
 		y[i] = ModulacjaAmp(x[i], Ka, fn);
 	}
+	//Wykres(x, y);
 	WidmoShow(x, y, fs);
 
 }
@@ -238,5 +239,5 @@ void PTD_lab3::WidmoShow(QVector<double> x, QVector<double> y, double fs)
 		Md[i] = 10. * log10(M[i]);
 		FK[i] = (i*fs / (X.size()));
 	}
-	Wykres(FK, Md);
+	Wykres(FK, M);
 }

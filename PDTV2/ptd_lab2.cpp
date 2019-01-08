@@ -26,7 +26,9 @@ void PTD_lab2::on_Wyk1LButton_clicked()
 		y[i] = fun.fx(i);
 	}
 	std::vector<std::complex<double>> X;
+	auto start = std::chrono::system_clock::now();
 	X = fastFourier(y);
+	auto end = std::chrono::system_clock::now();
 	QVector<double> M(X.size() / 2 + 1), Md(X.size() / 2 + 1), FK(X.size() / 2 + 1);
 	for (int i = 0; i < X.size() / 2 + 1; i++)
 	{
@@ -34,6 +36,8 @@ void PTD_lab2::on_Wyk1LButton_clicked()
 		Md[i] = 10. * log10(M[i]);
 		FK[i] = (i*fs / (X.size()));
 	}
+	std::chrono::duration<double> elapsed_seconds = end - start;
+	this->label->setText(QString::fromStdString(std::to_string(elapsed_seconds.count())));
 	WykresLine(FK, Md);
 
 }
@@ -50,7 +54,9 @@ void PTD_lab2::on_Wyk2LButton_clicked()
 		y[i] = fun.fz(i);
 	}
 	std::vector<std::complex<double>> X;
+	auto start = std::chrono::system_clock::now();
 	X = fastFourier(y);
+	auto end = std::chrono::system_clock::now();
 	QVector<double> M(X.size() / 2 + 1), Md(X.size() / 2 + 1), FK(X.size() / 2 + 1);
 	for (int i = 0; i < X.size() / 2 + 1; i++)
 	{
@@ -58,6 +64,8 @@ void PTD_lab2::on_Wyk2LButton_clicked()
 		Md[i] = 10. * log10(M[i]);
 		FK[i] = (i*fs / (X.size()));
 	}
+	std::chrono::duration<double> elapsed_seconds = end - start;
+	this->label->setText(QString::fromStdString(std::to_string(elapsed_seconds.count())));
 	WykresLine(FK, Md);
 }
 void PTD_lab2::on_Wyk3LButton_clicked()
@@ -72,7 +80,9 @@ void PTD_lab2::on_Wyk3LButton_clicked()
 		y[i] = fun.fv(i);
 	}
 	std::vector<std::complex<double>> X;
+	auto start = std::chrono::system_clock::now();
 	X = fastFourier(y);
+	auto end= std::chrono::system_clock::now();
 	QVector<double> M(X.size() / 2 + 1), Md(X.size() / 2 + 1), FK(X.size() / 2 + 1);
 	for (int i = 0; i < X.size() / 2 + 1; i++)
 	{
@@ -80,6 +90,8 @@ void PTD_lab2::on_Wyk3LButton_clicked()
 		Md[i] = 10. * log10(M[i]);
 		FK[i] = (i*fs / (X.size()));
 	}
+	std::chrono::duration<double> elapsed_seconds = end - start;
+	this->label->setText(QString::fromStdString(std::to_string(elapsed_seconds.count())));
 	WykresLine(FK, Md);
 }
 void PTD_lab2::on_Wyk4LButton_clicked()
@@ -97,7 +109,9 @@ void PTD_lab2::on_Wyk4LButton_clicked()
 		t += inc;
 	}
 	std::vector<std::complex<double>> X;
+	auto start = std::chrono::system_clock::now();
 	X = fastFourier(y);
+	auto end = std::chrono::system_clock::now();
 	QVector<double> M(X.size() / 2 + 1), Md(X.size() / 2 + 1), FK(X.size() / 2 + 1);
 	for (int i = 0; i < X.size() / 2 + 1; i++)
 	{
@@ -105,6 +119,8 @@ void PTD_lab2::on_Wyk4LButton_clicked()
 		Md[i] = 10. * log10(M[i]);
 		FK[i] = (i*fs / (X.size()));
 	}
+	std::chrono::duration<double> elapsed_seconds = end - start;
+	this->label->setText(QString::fromStdString(std::to_string(elapsed_seconds.count())));
 	WykresLine(FK, Md);
 }
 void PTD_lab2::on_Wyk5LButton_clicked()
@@ -123,7 +139,9 @@ void PTD_lab2::on_Wyk5LButton_clicked()
 		t += inc;
 	}
 	std::vector<std::complex<double>> X;
+	auto start = std::chrono::system_clock::now();
 	X = fastFourier(y);
+	auto end = std::chrono::system_clock::now();
 	//PKT 2
 	QVector<double> M(X.size() / 2 + 1), Md(X.size() / 2 + 1), FK(X.size() / 2 + 1);
 	for (int i = 0; i < X.size() / 2 + 1; i++)
@@ -132,6 +150,8 @@ void PTD_lab2::on_Wyk5LButton_clicked()
 		Md[i] = 10. * log10(M[i]);
 		FK[i] = (i*fs / (X.size()));
 	}
+	std::chrono::duration<double> elapsed_seconds = end - start;
+	this->label->setText(QString::fromStdString(std::to_string(elapsed_seconds.count())));
 	WykresLine(FK, Md);
 }
 void PTD_lab2::on_Wyk6LButton_clicked()
@@ -150,7 +170,10 @@ void PTD_lab2::on_Wyk6LButton_clicked()
 		t += inc;
 	}
 	std::vector<std::complex<double>> X;
+
+	auto start = std::chrono::system_clock::now();
 	X = fastFourier(y);
+	auto end = std::chrono::system_clock::now();
 	//PKT 2
 	QVector<double> M(X.size() / 2 + 1), Md(X.size() / 2 + 1), FK(X.size() / 2 + 1);
 	for (int i = 0; i < X.size() / 2 + 1; i++)
@@ -159,6 +182,8 @@ void PTD_lab2::on_Wyk6LButton_clicked()
 		Md[i] = 10. * log10(M[i]);
 		FK[i] = (i*fs / (X.size()));
 	}
+	std::chrono::duration<double> elapsed_seconds = end - start;
+	this->label->setText(QString::fromStdString(std::to_string(elapsed_seconds.count())));
 	WykresLine(FK, Md);
 }
 void PTD_lab2::on_Wyk7LButton_clicked()
@@ -177,7 +202,9 @@ void PTD_lab2::on_Wyk7LButton_clicked()
 		t += inc;
 	}
 	std::vector<std::complex<double>> X;
+	auto start = std::chrono::system_clock::now();
 	X = fastFourier(y);
+	auto end = std::chrono::system_clock::now();
 	//PKT 2
 	QVector<double> M(X.size() / 2 + 1), Md(X.size() / 2 + 1), FK(X.size() / 2 + 1);
 	for (int i = 0; i < X.size() / 2 + 1; i++)
@@ -186,6 +213,8 @@ void PTD_lab2::on_Wyk7LButton_clicked()
 		Md[i] = 10. * log10(M[i]);
 		FK[i] = (i*fs / (X.size()));
 	}
+	std::chrono::duration<double> elapsed_seconds = end - start;
+	this->label->setText(QString::fromStdString(std::to_string(elapsed_seconds.count())));
 	WykresLine(FK, Md);
 }
 
@@ -201,7 +230,9 @@ void PTD_lab2::on_Wyk1LogButton_clicked()
 		y[i] = fun.fx(i);
 	}
 	std::vector<std::complex<double>> X;
+	auto start = std::chrono::system_clock::now();
 	X = fastFourier(y);
+	auto end = std::chrono::system_clock::now();
 	QVector<double> M(X.size() / 2 + 1), Md(X.size() / 2 + 1), FK(X.size() / 2 + 1);
 	for (int i = 0; i < X.size() / 2 + 1; i++)
 	{
@@ -209,6 +240,8 @@ void PTD_lab2::on_Wyk1LogButton_clicked()
 		Md[i] = 10. * log10(M[i]);
 		FK[i] = (i*fs / (X.size()));
 	}
+	std::chrono::duration<double> elapsed_seconds = end - start;
+	this->label->setText(QString::fromStdString(std::to_string(elapsed_seconds.count())));
 	WykresLog(FK, Md);
 }
 
@@ -224,7 +257,9 @@ void PTD_lab2::on_Wyk2LogButton_clicked()
 		y[i] = fun.fz(i);
 	}
 	std::vector<std::complex<double>> X;
+	auto start = std::chrono::system_clock::now();
 	X = fastFourier(y);
+	auto end = std::chrono::system_clock::now();
 	QVector<double> M(X.size() / 2 + 1), Md(X.size() / 2 + 1), FK(X.size() / 2 + 1);
 	for (int i = 0; i < X.size() / 2 + 1; i++)
 	{
@@ -232,6 +267,8 @@ void PTD_lab2::on_Wyk2LogButton_clicked()
 		Md[i] = 10. * log10(M[i]);
 		FK[i] = (i*fs / (X.size()));
 	}
+	std::chrono::duration<double> elapsed_seconds = end - start;
+	this->label->setText(QString::fromStdString(std::to_string(elapsed_seconds.count())));
 	WykresLog(FK, Md);
 }
 void PTD_lab2::on_Wyk3LogButton_clicked()
@@ -246,7 +283,9 @@ void PTD_lab2::on_Wyk3LogButton_clicked()
 		y[i] = fun.fv(i);
 	}
 	std::vector<std::complex<double>> X;
+	auto start = std::chrono::system_clock::now();
 	X = fastFourier(y);
+	auto end = std::chrono::system_clock::now();
 	QVector<double> M(X.size() / 2 + 1), Md(X.size() / 2 + 1), FK(X.size() / 2 + 1);
 	for (int i = 0; i < X.size() / 2 + 1; i++)
 	{
@@ -254,6 +293,8 @@ void PTD_lab2::on_Wyk3LogButton_clicked()
 		Md[i] = 10. * log10(M[i]);
 		FK[i] = (i*fs / (X.size()));
 	}
+	std::chrono::duration<double> elapsed_seconds = end - start;
+	this->label->setText(QString::fromStdString(std::to_string(elapsed_seconds.count())));
 	WykresLog(FK, Md);
 }
 void PTD_lab2::on_Wyk4LogButton_clicked()
@@ -271,7 +312,9 @@ void PTD_lab2::on_Wyk4LogButton_clicked()
 		t += inc;
 	}
 	std::vector<std::complex<double>> X;
+	auto start = std::chrono::system_clock::now();
 	X = fastFourier(y);
+	auto end = std::chrono::system_clock::now();
 	QVector<double> M(X.size() / 2 + 1), Md(X.size() / 2 + 1), FK(X.size() / 2 + 1);
 	for (int i = 0; i < X.size() / 2 + 1; i++)
 	{
@@ -279,6 +322,8 @@ void PTD_lab2::on_Wyk4LogButton_clicked()
 		Md[i] = 10. * log10(M[i]);
 		FK[i] = (i*fs / (X.size()));
 	}
+	std::chrono::duration<double> elapsed_seconds = end - start;
+	this->label->setText(QString::fromStdString(std::to_string(elapsed_seconds.count())));
 	WykresLog(FK, Md);
 }
 void PTD_lab2::on_Wyk5LogButton_clicked()
@@ -297,7 +342,9 @@ void PTD_lab2::on_Wyk5LogButton_clicked()
 		t += inc;
 	}
 	std::vector<std::complex<double>> X;
+	auto start = std::chrono::system_clock::now();
 	X = fastFourier(y);
+	auto end = std::chrono::system_clock::now();
 	//PKT 2
 	QVector<double> M(X.size() / 2 + 1), Md(X.size() / 2 + 1), FK(X.size() / 2 + 1);
 	for (int i = 0; i < X.size() / 2 + 1; i++)
@@ -306,6 +353,8 @@ void PTD_lab2::on_Wyk5LogButton_clicked()
 		Md[i] = 10. * log10(M[i]);
 		FK[i] = (i*fs / (X.size()));
 	}
+	std::chrono::duration<double> elapsed_seconds = end - start;
+	this->label->setText(QString::fromStdString(std::to_string(elapsed_seconds.count())));
 	WykresLog(FK, Md);
 }
 void PTD_lab2::on_Wyk6LogButton_clicked()
@@ -324,7 +373,9 @@ void PTD_lab2::on_Wyk6LogButton_clicked()
 		t += inc;
 	}
 	std::vector<std::complex<double>> X;
+	auto start = std::chrono::system_clock::now();
 	X = fastFourier(y);
+	auto end = std::chrono::system_clock::now();
 	//PKT 2
 	QVector<double> M(X.size() / 2 + 1), Md(X.size() / 2 + 1), FK(X.size() / 2 + 1);
 	for (int i = 0; i < X.size() / 2 + 1; i++)
@@ -333,6 +384,8 @@ void PTD_lab2::on_Wyk6LogButton_clicked()
 		Md[i] = 10. * log10(M[i]);
 		FK[i] = (i*fs / (X.size()));
 	}
+	std::chrono::duration<double> elapsed_seconds = end - start;
+	this->label->setText(QString::fromStdString(std::to_string(elapsed_seconds.count())));
 	WykresLog(FK, Md);
 }
 void PTD_lab2::on_Wyk7LogButton_clicked()
@@ -351,7 +404,9 @@ void PTD_lab2::on_Wyk7LogButton_clicked()
 		t += inc;
 	}
 	std::vector<std::complex<double>> X;
+	auto start = std::chrono::system_clock::now();
 	X = fastFourier(y);
+	auto end = std::chrono::system_clock::now();
 	//PKT 2
 	QVector<double> M(X.size() / 2 + 1), Md(X.size() / 2 + 1), FK(X.size() / 2 + 1);
 	for (int i = 0; i < X.size() / 2 + 1; i++)
@@ -360,6 +415,8 @@ void PTD_lab2::on_Wyk7LogButton_clicked()
 		Md[i] = 10. * log10(M[i]);
 		FK[i] = (i*fs / (X.size()));
 	}
+	std::chrono::duration<double> elapsed_seconds = end - start;
+	this->label->setText(QString::fromStdString(std::to_string(elapsed_seconds.count())));
 	WykresLog(FK, Md);
 }
 

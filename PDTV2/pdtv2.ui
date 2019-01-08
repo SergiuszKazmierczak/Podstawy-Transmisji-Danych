@@ -13,44 +13,45 @@
   <property name="windowTitle">
    <string>PDTV2</string>
   </property>
-  <widget class="QPushButton" name="lab1Button">
+  <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
      <x>40</x>
      <y>20</y>
-     <width>93</width>
-     <height>28</height>
+     <width>881</width>
+     <height>30</height>
     </rect>
    </property>
-   <property name="text">
-    <string>LAB1</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="lab2Button">
-   <property name="geometry">
-    <rect>
-     <x>140</x>
-     <y>20</y>
-     <width>93</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>LAB2</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="lab3Button">
-   <property name="geometry">
-    <rect>
-     <x>240</x>
-     <y>20</y>
-     <width>93</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>LAB3</string>
-   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPushButton" name="lab1Button">
+      <property name="text">
+       <string>LAB1</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="lab2Button">
+      <property name="text">
+       <string>LAB2</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="lab3Button">
+      <property name="text">
+       <string>LAB3</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="lab4Button">
+      <property name="text">
+       <string>LAB4</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>

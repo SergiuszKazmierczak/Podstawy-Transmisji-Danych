@@ -54,6 +54,9 @@
     <ClCompile Include="ptd_lab3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ptd_lab4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -79,6 +82,9 @@
     <QtMoc Include="ptd_lab3.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="ptd_lab4.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="pdtv2.ui">
@@ -91,6 +97,9 @@
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="ptd_lab3.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ptd_lab4.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
